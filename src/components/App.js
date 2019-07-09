@@ -11,6 +11,8 @@ const App = () => {
   const [editBookData, setEditBookData] = useState({
     id: "",
     title: "",
+    summary: "",
+    author: "",
     rating: ""
   });
   const [editBookModal, setEditBookModal] = useState(false);
@@ -44,7 +46,13 @@ const App = () => {
   };
 
   const editBook = book => {
-    setEditBookData({ id: book.id, title: book.title, rating: book.rating });
+    setEditBookData({
+      id: book.id,
+      title: book.title,
+      summary: book.summary,
+      author: book.author,
+      rating: book.rating
+    });
     setEditBookModal(!editBookModal);
   };
 

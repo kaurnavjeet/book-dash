@@ -39,6 +39,30 @@ const EditBook = props => {
           </InputGroup>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
+              <InputGroupText>Summary</InputGroupText>
+            </InputGroupAddon>
+            <Input
+              name="summary"
+              type="textarea"
+              id="summary"
+              value={props.editBookData.summary}
+              onChange={onChange}
+            />
+          </InputGroup>
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Author</InputGroupText>
+            </InputGroupAddon>
+            <Input
+              name="author"
+              type="text"
+              id="author"
+              value={props.editBookData.author}
+              onChange={onChange}
+            />
+          </InputGroup>
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">
               <InputGroupText>Rating</InputGroupText>
             </InputGroupAddon>
             <Input
